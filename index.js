@@ -6,10 +6,11 @@ app.use(
   cors({ origin: 'https://booklist-project.herokuapp.com/', credentials: true })
 )
 
+const port = process.env.port || 5000
 app.use(express.json({ extended: false }))
 
 app.use('/books', bookRoutes)
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log('Listening port on 5000...')
 })
