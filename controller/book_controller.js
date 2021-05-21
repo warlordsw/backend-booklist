@@ -42,3 +42,7 @@ export const removeAll = (req, res) => {
     //console.log(`all data removed`)
   })
 }
+
+export const newMessage = (req, res) => {
+  res.status(200).send('Hello world')
+}
